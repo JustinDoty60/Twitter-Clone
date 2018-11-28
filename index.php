@@ -118,6 +118,25 @@
   <title> Twitter </title>
   <link rel="shortcut icon" href="img/logo.ico" />
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function doValidate() {
+      console.log('Validating...');
+      try {
+        pw = document.getElementById('pass').value;
+        lg = document.getElementById('log').value;
+        console.log("Validating pw="+pw);
+        console.log("Validating lg="+lg);
+        if (pw == null || pw == "" || lg == null || lg == "") {
+          alert("Username and Password fields must be completed in order to log in");
+          return false;
+        }
+        return true;
+      } catch(e) {
+        return false;
+      }
+      return false;
+    }
+  </script>
 </head>
 <body>
   <div id="container">
@@ -139,12 +158,12 @@
               echo('<li id="nav_login">
                       <form method="post">
                         <div id="enter_username">
-                          <input type="text" placeholder="Username" name="username"></input>
+                          <input id="log" type="text" placeholder="Username" name="username"></input>
                         </div>
                         <div id="enter_password">
-                          <input type="password" placeholder="Password" name="password"></input>
+                          <input id="pass" type="password" placeholder="Password" name="password"></input>
                         </div>
-                        <input id="login" type="submit" value="Log in" name="login">
+                        <input id="login" type="submit" onclick="return doValidate();" value="Log in" name="login">
                       </form>
                     </li>');
             }
