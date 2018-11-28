@@ -1,0 +1,469 @@
+html {
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 15px;
+  color: #FFF;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #10171e;
+  height: inherit;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  color: #8899a6;
+  background-color: #1c2938;
+  width: 100%;
+  height: 48px;
+}
+
+nav ul {
+  height: inherit;
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav li {
+  font-weight: 800;
+  height: 42px;
+  line-height: 50px;
+}
+
+nav img {
+  height: auto;
+  width: auto;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #182430 inset;
+    -webkit-text-fill-color: #FFF !important;
+}
+
+.bottom_border {
+  border-bottom: 2px solid #1B3448;
+}
+
+.user_tweets {
+  display: flex;
+  border-top: 1px solid #38444d;
+}
+
+.user_tweet_pic {
+  float: left;
+  width: 70px;
+  height: inherit;
+}
+
+.user_tweet_pic img{
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.user_tweet_content {
+  float: right;
+  width: 518px;
+  height: inherit;
+}
+
+.tweet_message {
+  clear: both;
+  height: auto;
+  float: left;
+}
+
+.tweet_message p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  width: 492px;
+}
+
+.tweet_details {
+  clear: both;
+  height: 30px;
+}
+
+.tweet_details button {
+  color: #8899a6;
+  margin-top: 8px;
+  clear: both;
+  float: left;
+  border: none;
+  background: none;
+  outline: 0;
+  margin-bottom: 6px;
+  font-weight: 700;
+  background-image: url('img/like_idle.png');
+  background-size: 20px;
+  padding-left: 28px;
+  background-repeat: no-repeat;
+}
+
+.tweet_details button:hover {
+  background-image: url('img/like_hover.png');
+  cursor: pointer;
+  color: #e0245e;
+}
+
+.user_tweet_name {
+  font-size: 13px;
+  height: 30px;
+  width: 100%;
+}
+
+.user_tweet_name #name {
+  float: left;
+  margin-bottom: 0;
+}
+
+.user_tweet_name #username {
+  color: #8899a6;
+  margin-left: 4px;
+  float: left;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+#container {
+  overflow-y: overflow;
+  width: inherit;
+  height: inherit;
+  margin: auto;
+}
+
+#content {
+  clear: both;
+  margin: auto;
+  width: 890px;
+  height: inherit;
+}
+
+#nav_content {
+    width: 890px;
+    height: inherit;
+    margin: auto;
+}
+
+#nav_login {
+  padding-top: 10px;
+  width: 320px;
+  float: right;
+}
+
+#nav_logo {
+  line-height: 60px;
+  float: left;
+  margin-right: 1%;
+  padding-left: 4%;
+}
+
+#nav_home {
+  float: left;
+}
+
+#nav_username {
+  width: auto;
+  float: left;
+}
+
+#enter_username, #enter_password {
+  float: left;
+  margin-right: 10px;
+  line-height: 12px;
+}
+
+#enter_username input, #enter_password input, #login {
+  background-color: #182430;
+  color: #FFF;
+  outline: none;
+  border-radius: 21px;
+  height: 25px;
+  padding-left: 10px;
+  width: 100px;
+  border: 1px solid #38444d;
+}
+
+#enter_username input:focus, #enter_password input:focus {
+  border: 1px solid #1DA1F2;
+  transition: all .2s ease-in-out;
+}
+
+#login {
+  float: right;
+  margin-top: -4px;
+  padding: 10px;
+  height: auto;
+  width: 70px;
+  background-color: #1C88CC;
+  font-weight: 700;
+}
+
+#login:hover {
+  cursor: pointer;
+  background-color: #1DA1F2;
+}
+
+#login_error {
+  float: right;
+  width: auto;
+  margin-right: 10px;
+}
+
+#welcome, #welcome form {
+  float: right;
+  width: auto;
+  height: inherit;
+}
+
+#welcome form #login{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#user_info, #timeline {
+  background-color: #15202b;
+  border: 1px solid #38444d;
+  height: auto;
+}
+
+#user_info {
+  float: left;
+  width: 285px;
+  height: 208px;
+  margin-left: 7px;
+}
+
+#timeline {
+  float: right;
+  width: 583px;
+  margin-left: 3px;
+  margin-right: 7px;
+}
+
+#tweet_creation #login_error {
+  float: right;
+  height: 30px;
+}
+
+#tweet_creation #login_error p{
+  margin-top: 10px;
+}
+
+#user_info, #timeline {
+  margin-top: 54px;
+  margin-bottom: 15px;
+}
+
+#tweet_creation_content {
+  background-color: #1B3448;
+  width: 100%;
+  height: 175px;
+}
+
+#user_info_twitter_background {
+  width: 100%;
+  height: 95px;
+}
+
+#user_info_name {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+}
+
+#user_info_stats {
+  clear: both;
+  width: 100%;
+  height: 55px;
+}
+
+#user_info_stats h4{
+  margin: 0;
+}
+
+#user_info_name h3, #user_info_name h4 {
+  float: right;
+  width: 200px;
+  margin: 0px;
+}
+
+#user_name_info{
+  float: right;
+}
+
+#user_name_info h4{
+  font-weight: 100;
+}
+
+#username_info {
+  float: right;
+  height: inherit;
+  margin-top: 5px;
+  width: 210px;
+  text-align: left;
+}
+
+#username_info h4 {
+  text-align: left;
+  font-weight: 100;
+}
+
+#profile_pic {
+  position: absolute;
+  float: left;
+  width: 80px;
+  height: inherit;
+  text-align: center;
+  top: 120px;
+}
+
+#profile_pic img, #tweet_picture img {
+  height: auto;
+  width: auto;
+  border-radius: 50%;
+}
+
+#profile_pic img {
+  max-width: 60px;
+  max-height: 60px;
+  border: 3px solid #15202b;
+}
+
+#tweet_picture {
+  float: left;
+  width: 70px;
+  height: 100%;
+}
+
+#tweet_picture img {
+  float: right;
+  margin-top: 14px;
+  margin-right: 10px;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+#tweet_creation {
+  height: 155px;
+  width: 100%;
+}
+
+#tweet_text_box {
+  font-family: Arial;
+  float: right;
+  height: 86%;
+  width: 513px;
+}
+
+#tweet_text_box textarea {
+  color: #FFF;
+  margin-top: 14px;
+  resize: none;
+  width: 93%;
+  font-size: 15px;
+  padding: 8px;
+  border: 3px solid #1B5881;
+  border-radius: 8px;
+  background-color: #10171e;
+  outline: 0;
+}
+
+#tweet_button input {
+  font-size: 13px;
+  font-weight: 800;
+  float: right;
+  color: inherit;
+  font-family: inherit;
+  background-color: #1C88CC;
+  border-radius: 40px;
+  padding: 8px;
+  border: 0;
+  margin-right: 16px;
+  width: 75px;
+  height: 35px;
+  outline: 0;
+}
+
+#tweet_button input:hover {
+  cursor: pointer;
+  background-color: #1DA1F2;
+}
+
+#welcome form #login {
+  width: 80px;
+}
+
+#signup {
+  font-size: 13px;
+}
+
+#signup h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#signup #signup_text h2 {
+  margin-top: 13px;
+  margin-bottom: 10px;
+  margin-left: 35px;
+}
+
+#signup #signup_text {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  height: 35px;
+}
+
+#signup #signup_text, #signup #signup_name, #signup #signup_username,
+#signup #signup_email, #signup #signup_password {
+  height: 35px;
+  float: left;
+  width: 100%;
+
+}
+
+#signup div input {
+  background-color: transparent;
+  color: #FFF;
+  outline: none;
+  width: 120px;
+  border: none;
+  border-bottom: 1px solid #38444d;
+  height: 20px;
+  margin-left: 35px;
+}
+
+#signup #signup_password {
+  width: 180px;
+}
+
+#signup div input:focus {
+  border-color: #1C88CC;
+}
+
+#signup #signup_button {
+  margin-right: 25px;
+}
+
+#signup #signup_button input {
+  float: right;
+  background-color: #1C88CC;
+  width: 80px;
+  height: 35px;
+  margin: 0;
+}
