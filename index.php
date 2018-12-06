@@ -142,12 +142,10 @@
 		var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/;
 		if (regex.test(email))
 			{
-				return (true);
+				return true;
 			}
-		else{
 			alert('Email address must contain @');
-			return (false);
-		}
+			return false;
 	}
   </script>
 </head>
@@ -223,7 +221,7 @@
                             <input type="password" placeholder="Password" name="signup_password"></input>
                           </div>
                           <div id="signup_button">
-                            <input id="login" type="submit" onclick="checkEmail()" value="Sign up" name=signup>
+                            <input id="login" type="submit" onclick="return checkEmail();" value="Sign up" name=signup>
                           </input>
                           </div>
                         </div>
