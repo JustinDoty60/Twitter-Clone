@@ -136,28 +136,28 @@
       }
       return false;
     }
-	function checkEmail()
-	{
-		var usernameS = document.getElementById('signup_username').value;
-		var nameS = document.getElementById('signup_name').value;
-		var passwords = document.getElementById('signup_password').value;
-		var email = document.getElementById('emails').value;
-		
-		var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/;
-		if (regex.test(email))
-			{
-				if(usernameS != null & usernameS != "" & nameS != null & nameS != "" & passwords != null & passwords != "")
-				{
-					return true;
-				}
-				alert('Not all fields have been filled');
-				return false;
-				
-			}
-			alert('Email address must contain @');
-			return false;
-		
-	}
+    function checkEmail()
+  	{
+  		var usernameS = document.getElementById('signup_usernam').value;
+  		var nameS = document.getElementById('signup_nam').value;
+  		var passwords = document.getElementById('signup_passwor').value;
+  		var email = document.getElementById('email').value;
+
+  		var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/;
+  		if (regex.test(email))
+  			{
+  				if(usernameS != null & usernameS != "" & nameS != null & nameS != "" & passwords != null & passwords != "")
+  				{
+  					return true;
+  				}
+  				alert('Not all fields have been filled');
+  				return false;
+
+  			}
+  			alert('Email address must contain @');
+  			return false;
+
+  	}
   </script>
 </head>
 <body>
@@ -220,19 +220,19 @@
                             <h2>Create your account</h2>
                           </div>
                           <div id="signup_name">
-                            <input type="text" placeholder="Name" name="signup_name" id="signup_name"></input>
+                            <input type="text" placeholder="Name" name="signup_name" id="signup_nam"></input>
                           </div>
                           <div id="signup_username">
-                            <input type="text" placeholder="Username" name="signup_username" id="signup_username"></input>
+                            <input type="text" placeholder="Username" name="signup_username" id="signup_usernam"></input>
                           </div>
                           <div id="signup_email">
-                            <input type="text" placeholder="Email" name="signup_email" id="emails"></input>
+                            <input type="text" placeholder="Email" name="signup_email" id="email"></input>
                           </div>
                           <div id="signup_password">
-                            <input type="password" placeholder="Password" name="signup_password" id="signup_password"></input>
+                            <input type="password" placeholder="Password" name="signup_password" id="signup_passwor"></input>
                           </div>
                           <div id="signup_button">
-                            <input id="login" type="submit" onclick="return checkSignup();" value="Sign up" name=signup>
+                            <input id="login" type="submit" onclick="return checkEmail();" value="Sign up" name=signup>
                           </input>
                           </div>
                         </div>
