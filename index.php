@@ -136,6 +136,19 @@
       }
       return false;
     }
+	function checkEmail()
+	{
+		var email = document.getElementById('emails').value;
+		var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/;
+		if (regex.test(email))
+			{
+				return (true);
+			}
+		else{
+			alert('Email address must contain @');
+			return (false);
+		}
+	}
   </script>
 </head>
 <body>
@@ -204,13 +217,13 @@
                             <input type="text" placeholder="Username" name="signup_username"></input>
                           </div>
                           <div id="signup_email">
-                            <input type="text" placeholder="Email" name="signup_email"></input>
+                            <input type="text" placeholder="Email" name="signup_email" id="emails"></input>
                           </div>
                           <div id="signup_password">
                             <input type="password" placeholder="Password" name="signup_password"></input>
                           </div>
                           <div id="signup_button">
-                            <input id="login" type="submit" value="Sign up" name=signup>
+                            <input id="login" type="submit" onclick="checkEmail()" value="Sign up" name=signup>
                           </input>
                           </div>
                         </div>
