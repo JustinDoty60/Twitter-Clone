@@ -138,14 +138,25 @@
     }
 	function checkEmail()
 	{
+		var usernameS = document.getElementById('signup_username').value;
+		var nameS = document.getElementById('signup_name').value;
+		var passwords = document.getElementById('signup_password').value;
 		var email = document.getElementById('emails').value;
+		
 		var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/;
 		if (regex.test(email))
 			{
-				return true;
+				if(usernameS != null & usernameS != "" & nameS != null & nameS != "" & passwords != null & passwords != "")
+				{
+					return true;
+				}
+				alert('Not all fields have been filled');
+				return false;
+				
 			}
 			alert('Email address must contain @');
 			return false;
+		
 	}
   </script>
 </head>
@@ -209,19 +220,19 @@
                             <h2>Create your account</h2>
                           </div>
                           <div id="signup_name">
-                            <input type="text" placeholder="Name" name="signup_name"></input>
+                            <input type="text" placeholder="Name" name="signup_name" id="signup_name"></input>
                           </div>
                           <div id="signup_username">
-                            <input type="text" placeholder="Username" name="signup_username"></input>
+                            <input type="text" placeholder="Username" name="signup_username" id="signup_username"></input>
                           </div>
                           <div id="signup_email">
                             <input type="text" placeholder="Email" name="signup_email" id="emails"></input>
                           </div>
                           <div id="signup_password">
-                            <input type="password" placeholder="Password" name="signup_password"></input>
+                            <input type="password" placeholder="Password" name="signup_password" id="signup_password"></input>
                           </div>
                           <div id="signup_button">
-                            <input id="login" type="submit" onclick="return checkEmail();" value="Sign up" name=signup>
+                            <input id="login" type="submit" onclick="return checkSignup();" value="Sign up" name=signup>
                           </input>
                           </div>
                         </div>
